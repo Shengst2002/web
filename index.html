@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Pet Section</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <!-- Bootstrap 5 CDN -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+
+  <style>
+    body {
+      background: linear-gradient(to bottom, #ffd6ba, #ffb347);
+      margin: 0;
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    }
+
+    /* Navbar */
+    .navbar {
+      background: linear-gradient(90deg, #e6471f, #feb47b);
+    }
+    .navbar-brand { font-weight: bold; color: #fff; }
+    .navbar .btn-outline-light { border-color: #fff; color: #fff; }
+    .btn-outline-light:hover { background-color: #ff7e5f; border-color: #ff7e5f; color: #fff; }
+
+    /* Sidebar */
+    .offcanvas.bg-dark { background-color: #3e1f47 !important; }
+    .offcanvas .nav-link { color: #ffdd59; transition: color 0.3s; }
+    .offcanvas .nav-link:hover { color: #ff6f61; }
+
+    /* Pet Section */
+    .pet-section {
+      background: #fff3e6;
+      border-radius: 25px;
+      padding: 50px;
+      margin-top: 30px;
+      box-shadow: 0 8px 20px rgba(0,0,0,0.1);
+    }
+    .pet-section h3 { color: #ff6f61; }
+    .pet-section p.intro { color: #7f5a83; font-size: 1.2rem; margin-bottom: 50px; }
+
+    /* Cards */
+    .card {
+      border: none;
+      border-radius: 20px;
+      overflow: hidden;
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+      color: #fff;
+      text-align: center;
+    }
+    .card:hover {
+      transform: translateY(-10px);
+      box-shadow: 0 15px 30px rgba(0,0,0,0.2);
+    }
+    .card img {
+      border-radius: 20px 20px 0 0;
+      height: 250px;
+      object-fit: cover;
+      transition: transform 0.3s ease;
+    }
+    .card:hover img { transform: scale(1.05); }
+
+    .card-body h5 { font-weight: bold; color: #fff; }
+    .card-body p { color: #fff; font-size: 0.95rem; }
+    .card-body button {
+      margin-top: 15px;
+      background: #ff7e5f;
+      border: none;
+      color: #fff;
+      padding: 8px 18px;
+      border-radius: 12px;
+      cursor: pointer;
+      transition: background 0.3s ease;
+    }
+    .card-body button:hover { background: #ff6f61; }
+
+    /* Individual card gradients */
+    .dog-card { background: linear-gradient(135deg, #ff9a9e, #fecfef); }
+    .cat-card { background: linear-gradient(135deg, #f6d365, #fda085); }
+    .bird-card { background: linear-gradient(135deg, #a1c4fd, #c2e9fb); }
+
+    @media (max-width: 768px) { .pet-section { padding: 30px; } }
+  </style>
+</head>
+<body>
+
+<!-- Navbar -->
+<nav class="navbar navbar-dark px-3">
+  <div class="container-fluid">
+    <button class="btn btn-outline-light" type="button" data-bs-toggle="offcanvas" data-bs-target="#sidebar">☰</button>
+    <a class="navbar-brand ms-3" href="#">PetWorld</a>
+    <form class="d-flex ms-auto">
+      <input class="form-control me-2" type="search" placeholder="Search pets...">
+      <button class="btn btn-outline-light" type="submit">Search</button>
+    </form>
+  </div>
+</nav>
+
+<!-- Sidebar -->
+<div class="offcanvas offcanvas-start bg-dark text-white" tabindex="-1" id="sidebar">
+  <div class="offcanvas-header">
+    <h5 class="offcanvas-title">Menu</h5>
+    <button type="button" class="btn-close btn-close-white" data-bs-dismiss="offcanvas"></button>
+  </div>
+  <div class="offcanvas-body">
+    <ul class="nav flex-column">
+      <li class="nav-item"><a class="nav-link" href="#">Home</a></li>
+      <li class="nav-item"><a class="nav-link" href="#">Dogs</a></li>
+      <li class="nav-item"><a class="nav-link" href="#">Cats</a></li>
+      <li class="nav-item"><a class="nav-link" href="#">Birds</a></li>
+      <li class="nav-item"><a class="nav-link" href="#">Contact</a></li>
+    </ul>
+  </div>
+</div>
+
+<!-- Main Content -->
+<div class="container-fluid min-vh-100">
+  <div class="pet-section">
+    <div class="text-center mb-5">
+      <h3 class="fw-bold">Choose Your Companion</h3>
+      <p class="intro">Discover the perfect pet for your lifestyle — loyal dogs, playful cats, or colorful birds, each with their own unique personality and charm.</p>
+    </div>
+
+    <div class="row g-4">
+      <!-- Dog -->
+      <div class="col-md-4">
+        <div class="card dog-card shadow">
+          <img src="https://images.unsplash.com/photo-1558788353-f76d92427f16" alt="Golden Retriever puppy smiling outdoors">
+          <div class="card-body">
+            <h5>Dogs</h5>
+            <p>Loyal, friendly, and full of love. Dogs are social companions that enjoy playtime, walks, and bonding with family members.</p>
+            <button>Learn More</button>
+          </div>
+        </div>
+      </div>
+
+      <!-- Cat -->
+      <div class="col-md-4">
+        <div class="card cat-card shadow">
+          <img src="https://images.unsplash.com/photo-1518791841217-8f162f1e1131" alt="Cute playful kitten lying down">
+          <div class="card-body">
+            <h5>Cats</h5>
+            <p>Independent, playful, and adorable. Cats provide comfort and companionship while enjoying their own space in your home.</p>
+            <button>Learn More</button>
+          </div>
+        </div>
+      </div>
+
+      <!-- Bird -->
+      <div class="col-md-4">
+        <div class="card bird-card shadow">
+          <img src="ani/parrot.png" alt="Colorful parrot perched on branch">
+          <div class="card-body">
+            <h5>Birds</h5>
+            <p>Colorful, cheerful, and lively. Birds bring music and beauty to your home and enjoy interaction and mental stimulation.</p>
+            <button>Learn More</button>
+          </div>
+        </div>
+      </div>
+
+      <!-- Human -->
+      <div class="col-md-4">
+        <div class="card dog-card shadow">
+          <img src="ani/woman.png" alt="Friendly human companion">
+          <div class="card-body">
+            <h5>Human</h5>
+            <p>Humans can be amazing companions and caretakers for pets, offering love and attention every day.</p>
+            <button>Learn More</button>
+          </div>
+        </div>
+      </div>
+
+      <!-- Dinosaur -->
+      <div class="col-md-4">
+        <div class="card cat-card shadow">
+          <img src="ani/dinosour.png" alt="Playful dinosaur">
+          <div class="card-body">
+            <h5>Dinosaur</h5>
+            <p>Imaginative, fun, and unique companions from the world of imagination.</p>
+            <button>Learn More</button>
+          </div>
+        </div>
+      </div>
+
+      <!-- Dragon -->
+      <div class="col-md-4">
+        <div class="card bird-card shadow">
+          <img src="ani/dragon.png" alt="Majestic dragon">
+          <div class="card-body">
+            <h5>Dragon</h5>
+            <p>Powerful and mystical companions, adding a sense of magic to your adventures.</p>
+            <button>Learn More</button>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</div>
+
+<!-- Bootstrap JS -->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+
+</body>
+</html>
