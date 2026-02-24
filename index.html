@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <title>Pet Section</title>
+  <title>Adaption Section</title>
   <meta name="viewport" content="width=device-width, initial-scale=1">
 
   <!-- Bootstrap 5 CDN -->
@@ -40,46 +40,54 @@
     .pet-section p.intro { color: #7f5a83; font-size: 1.2rem; margin-bottom: 50px; }
 
     /* Cards */
-    .card {
-      border: none;
-      border-radius: 20px;
-      overflow: hidden;
-      transition: transform 0.3s ease, box-shadow 0.3s ease;
-      color: #fff;
-      text-align: center;
-    }
-    .card:hover {
-      transform: translateY(-10px);
-      box-shadow: 0 15px 30px rgba(0,0,0,0.2);
-    }
-    .card img {
-      border-radius: 20px 20px 0 0;
-      height: 250px;
-      object-fit: cover;
-      transition: transform 0.3s ease;
-    }
-    .card:hover img { transform: scale(1.05); }
+    /* Card colors and readability */
+.card {
+  border: none;
+  border-radius: 20px;
+  overflow: hidden;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  text-align: center;
+}
 
-    .card-body h5 { font-weight: bold; color: #fff; }
-    .card-body p { color: #fff; font-size: 0.95rem; }
-    .card-body button {
-      margin-top: 15px;
-      background: #ff7e5f;
-      border: none;
-      color: #fff;
-      padding: 8px 18px;
-      border-radius: 12px;
-      cursor: pointer;
-      transition: background 0.3s ease;
-    }
-    .card-body button:hover { background: #ff6f61; }
+/* Hover effect */
+.card:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 15px 30px rgba(0,0,0,0.2);
+}
 
-    /* Individual card gradients */
-    .dog-card { background: linear-gradient(135deg, #ff9a9e, #fecfef); }
-    .cat-card { background: linear-gradient(135deg, #f6d365, #fda085); }
-    .bird-card { background: linear-gradient(135deg, #a1c4fd, #c2e9fb); }
+.card img {
+  border-radius: 20px 20px 0 0;
+  height: 250px;
+  object-fit: cover;
+  transition: transform 0.3s ease;
+}
+.card:hover img { transform: scale(1.05); }
 
-    @media (max-width: 768px) { .pet-section { padding: 30px; } }
+/* Card body */
+.card-body {
+  padding: 20px;
+}
+
+/* Titles and text */
+.card-body h5 { font-weight: bold; margin-bottom: 10px; }
+.card-body p { font-size: 0.95rem; margin-bottom: 15px; }
+
+/* Buttons */
+.card-body button {
+  background: #ff7e5f;
+  border: none;
+  color: #fff;
+  padding: 8px 18px;
+  border-radius: 12px;
+  cursor: pointer;
+  transition: background 0.3s ease;
+}
+.card-body button:hover { background: #ff6f61; }
+
+/* Individual card gradients with readable text */
+.first-card { background: linear-gradient(135deg, #ff9a9e, #fecfef); color: #333; }
+.second-card { background: linear-gradient(135deg, #f6d365, #fda085); color: #333; }
+.third-card { background: linear-gradient(135deg, #a1c4fd, #c2e9fb); color: #333; }
   </style>
 </head>
 <body>
@@ -117,14 +125,14 @@
 <div class="container-fluid min-vh-100">
   <div class="pet-section">
     <div class="text-center mb-5">
-      <h3 class="fw-bold">Choose Your Companion</h3>
-      <p class="intro">Discover the perfect pet for your lifestyle — loyal dogs, playful cats, or colorful birds, each with their own unique personality and charm.</p>
+      <h3 class="fw-bold">Discover Your Ideal Companion</h3>
+<p class="intro">Whether it’s an animal of any kind or a caring human companion, find connections that bring joy, warmth, and meaning into your life.</p>
     </div>
 
     <div class="row g-4">
       <!-- Dog -->
       <div class="col-md-4">
-        <div class="card dog-card shadow">
+        <div class="card first-card shadow">
           <img src="https://images.unsplash.com/photo-1558788353-f76d92427f16" alt="Golden Retriever puppy smiling outdoors">
           <div class="card-body">
             <h5>Dogs</h5>
@@ -136,7 +144,7 @@
 
       <!-- Cat -->
       <div class="col-md-4">
-        <div class="card cat-card shadow">
+        <div class="card second-card shadow">
           <img src="https://images.unsplash.com/photo-1518791841217-8f162f1e1131" alt="Cute playful kitten lying down">
           <div class="card-body">
             <h5>Cats</h5>
@@ -148,7 +156,7 @@
 
       <!-- Bird -->
       <div class="col-md-4">
-        <div class="card bird-card shadow">
+        <div class="card third-card shadow">
           <img src="ani/parrot.png" alt="Colorful parrot perched on branch">
           <div class="card-body">
             <h5>Birds</h5>
@@ -160,11 +168,11 @@
 
       <!-- Human -->
       <div class="col-md-4">
-        <div class="card dog-card shadow">
-          <img src="ani/woman.png" alt="Friendly human companion">
+        <div class="card first-card shadow">
+          <img src="ani/child.png" alt="Friendly human companion">
           <div class="card-body">
-            <h5>Human</h5>
-            <p>Humans can be amazing companions and caretakers for pets, offering love and attention every day.</p>
+           <h5>Children</h5>
+                <p>Children bring joy, laughter, and love, filling the spaces in your heart with companionship and warmth every day.</p>
             <button>Learn More</button>
           </div>
         </div>
@@ -172,7 +180,7 @@
 
       <!-- Dinosaur -->
       <div class="col-md-4">
-        <div class="card cat-card shadow">
+        <div class="card second-card shadow">
           <img src="ani/dinosour.png" alt="Playful dinosaur">
           <div class="card-body">
             <h5>Dinosaur</h5>
@@ -184,7 +192,7 @@
 
       <!-- Dragon -->
       <div class="col-md-4">
-        <div class="card bird-card shadow">
+        <div class="card third-card shadow">
           <img src="ani/dragon.png" alt="Majestic dragon">
           <div class="card-body">
             <h5>Dragon</h5>
